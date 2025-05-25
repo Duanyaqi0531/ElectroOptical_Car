@@ -10,14 +10,14 @@
       <TargetName>ElectroOptical_Car</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6220000::V6.22::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F407VETx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F4xx_DFP.2.13.0</PackID>
-          <PackURL>http://www.keil.com/pack</PackURL>
+          <PackID>Keil.STM32F4xx_DFP.2.17.1</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000-0x2001BFFF) IRAM2(0x2001C000-0x2001FFFF) IROM(0x8000000-0x807FFFF) CLOCK(25000000) FPU2 CPUTYPE("Cortex-M4") TZ</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../User/device;../User/middleware/alg;../User/middleware/drv;../User/task;../Middlewares/ST/ARM/DSP/Inc;../User/internation</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../User/device;../User/middleware/alg;../User/middleware/drv;../User/task;../Middlewares/ST/ARM/DSP/Inc;../User/internation;..\User\device\mpu6050</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -712,6 +712,21 @@
               <FileType>8</FileType>
               <FilePath>..\User\device\dvc_encodermotor.cpp</FilePath>
             </File>
+            <File>
+              <FileName>MPU6050.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\device\mpu6050\MPU6050.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>inv_mpu.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\device\mpu6050\inv_mpu.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>inv_mpu_dmp_motion_driver.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\device\mpu6050\inv_mpu_dmp_motion_driver.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -768,9 +783,6 @@
               <FilePath>..\User\task\task.cpp</FilePath>
             </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>
           <GroupName>Middlewares/Library/DSP Library/DSP Library</GroupName>
@@ -869,6 +881,9 @@
               </FileOption>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
     </Target>

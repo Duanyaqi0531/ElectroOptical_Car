@@ -56,7 +56,7 @@ void Class_EncoderMotor::TIM_Encoder_Calculate()
         Total_Round--;
     }
     //计算角度
-    Now_Angle = (float)Encoder_Diff_Sum/((int32_t)Encoder_Resolution * 4) * 360.0f / GearRation;
+    Now_Angle = (float)(Encoder_Diff_Sum+Total_Round*Encoder_Resolution*4)/((int32_t)Encoder_Resolution * 4) * 360.0f / GearRation;
     //M法测速
     Now_Omega_Angle = (Now_Angle - Last_Angle) / 0.001f;
     Now_Velocity = Now_Omega_Angle * DEG_TO_RAD * WheelDiameter / 2.0f;

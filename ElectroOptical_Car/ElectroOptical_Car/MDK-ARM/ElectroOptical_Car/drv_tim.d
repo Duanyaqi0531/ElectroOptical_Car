@@ -7,17 +7,8 @@ electrooptical_car/drv_tim.o: ..\User\middleware\drv\drv_tim.cpp \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h \
   ..\Drivers\CMSIS\Include\core_cm4.h \
-  C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h \
-  C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config \
-  C:\Keil_v5\ARM\ARMCLANG\include\stdint.h \
-  D:\2025\ROS_Car\ElectroOptical_Car\ElectroOptical_Car\Drivers\CMSIS\Include\cmsis_version.h \
-  D:\2025\ROS_Car\ElectroOptical_Car\ElectroOptical_Car\Drivers\CMSIS\Include\cmsis_compiler.h \
-  D:\2025\ROS_Car\ElectroOptical_Car\ElectroOptical_Car\Drivers\CMSIS\Include\cmsis_armclang.h \
-  D:\2025\ROS_Car\ElectroOptical_Car\ElectroOptical_Car\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
-  C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h \
-  C:\Keil_v5\ARM\ARMCLANG\include\stddef.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h \

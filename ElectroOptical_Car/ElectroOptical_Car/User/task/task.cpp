@@ -2,7 +2,11 @@
 #include "ita_car.h"  
 
 Class_EoCar EoCar;
-
+int mpu6050_init_flag=1;
+float pitch;
+float roll;
+float yaw;
+int16_t gx,gy,gz,ax,ay,az;
 void Chassis_Device_CAN1_Callback(Struct_CAN_Rx_Buffer *CAN_RxMessage)
 {
     switch (CAN_RxMessage->Header.StdId)
@@ -15,6 +19,7 @@ void Task_UART3_Callback(uint8_t *Buffer, uint16_t Length)
 void Task1ms_TIM7_Callback()
 {
     EoCar.TIM_Calculate_PeriodElapsedCallback();
+		MPU6050_DMP_Get_Data(&pitch, &roll, &yaw,&gx,&gy,&gz,&ax,&ay,&az);
 }
 
 extern "C" void Task_Init(void)
@@ -38,6 +43,12 @@ extern "C" void Task_Init(void)
     HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_2);
     HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_3);
     HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_4);
+	
+		while(mpu6050_init_flag)
+		{
+		mpu6050_init_flag = MPU6050_DMP_Init();
+		HAL_Delay(1000);
+		}
 }
 
 void Task_Loop(void)

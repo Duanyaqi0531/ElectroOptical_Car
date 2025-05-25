@@ -4,6 +4,7 @@
 #include "dvc_encodermotor.h"
 #include "drv_can.h"
 #include "drv_uart.h"
+#include "MPU6050.h"
 /* USER CODE BEGIN  */
 class Class_EoCar;
 // extern Class_EoCar EoCar;

@@ -10,7 +10,7 @@ public:
 
     Class_PID PID_Omage;
     
-    void Init(TIM_HandleTypeDef *__TIM_EncoderHandle,uint16_t __encoder_resolution = 4096, uint32_t __max_encoder_sum = 65535 , float __GearRation = 1.0f,float __WheelDiameter = 0.065f); 
+    void Init(TIM_HandleTypeDef *__TIM_EncoderHandle,uint16_t __encoder_resolution = 4096, uint32_t __max_encoder_sum = 65535 , float __GearRation = 20.25f,float __WheelDiameter = 0.065f); 
     void TIM_Encoder_Calculate();
     void TIM_Calculate_PeriodElapsedCallback();
     void inline Set_EncoderMotor_Target_Velocity(float __Target_Velocity);

@@ -1,6 +1,6 @@
 #include "ita_car.h"
 
-#define encoder_resolution 400
+#define encoder_resolution 500
 void Class_EoCar::Init()
 {
     //底盘初始化
@@ -9,8 +9,13 @@ void Class_EoCar::Init()
     E_Motor[2].Init(&htim4,encoder_resolution,65535);
     E_Motor[3].Init(&htim5,encoder_resolution,65535);
 
-    E_Motor[0].PID_Omage.Init(500000.0f,100.0f,5.0f,0.0f,2000.0f,20000.0f);
-    E_Motor[1].PID_Omage.Init(500000.0f,100.0f,5.0f,0.0f,2000.0f,20000.0f);
+//    E_Motor[0].PID_Omage.Init(500000.0f,100.0f,5.0f,0.0f,2000.0f,20000.0f);
+//    E_Motor[1].PID_Omage.Init(500000.0f,100.0f,5.0f,0.0f,2000.0f,20000.0f);
+	
+	  E_Motor[0].PID_Omage.Init(800000.0f,125.0f,0.0f,0.0f,2000.0f,20000.0f);
+    E_Motor[1].PID_Omage.Init(800000.0f,125.0f,0.0f,0.0f,2000.0f,20000.0f);
+		E_Motor[0].PID_Omage.Init(800000.0f,125.0f,0.0f,0.0f,2000.0f,20000.0f);
+    E_Motor[1].PID_Omage.Init(800000.0f,125.0f,0.0f,0.0f,2000.0f,20000.0f);
 }
 int32_t  Count = 0;
 void Class_EoCar::TIM_Calculate_PeriodElapsedCallback()
