@@ -727,6 +727,11 @@
               <FileType>8</FileType>
               <FilePath>..\User\device\mpu6050\inv_mpu_dmp_motion_driver.cpp</FilePath>
             </File>
+            <File>
+              <FileName>dvc_lkmotor.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\device\dvc_lkmotor.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -761,6 +766,26 @@
               <FileName>drv_uart.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>..\User\middleware\drv\drv_uart.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>drv_adc.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\middleware\drv\drv_adc.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>drv_dwt.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\middleware\drv\drv_dwt.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>drv_i2c.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\middleware\drv\drv_i2c.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>drv_math.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\User\middleware\drv\drv_math.h</FilePath>
             </File>
           </Files>
         </Group>
