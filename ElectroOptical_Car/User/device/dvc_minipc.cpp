@@ -112,7 +112,8 @@ if(Verify_CRC16_Check_Sum(UART_Manage_Object->Rx_Buffer,UART_Manage_Object->Rx_B
 
 void Class_Minipc::UART_Tx_UI()
 {
-	memcpy(&UART_Manage_Object->Tx_Buffer[0], &Send_Data, sizeof(&Send_Data));
+	memcpy(&UART_Manage_Object->Tx_Buffer[0], &Send_Data, sizeof(Send_Data));
+	Append_CRC16_Check_Sum(UART_Manage_Object->Tx_Buffer,sizeof(Send_Data));
 	UART_Send_Data(UART_Manage_Object->UART_Handler, UART_Manage_Object->Tx_Buffer, sizeof(Send_Data));
 
 }

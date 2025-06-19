@@ -72,10 +72,14 @@ struct Struct_MiniPc_Data
     uint8_t flags;           // 标志位
     uint16_t crc16 = 0xFFFF; // crc16校验
 } __attribute__((packed));
+
 struct Struct_Send_Data
 {
     uint8_t header = 0x5A;
-    
+    float encoder_speed_LF;  // 左前轮速度 m/s
+    float encoder_speed_RF;  // 右前轮速度
+    float encoder_speed_LR;  // 左后轮速度
+    float encoder_speed_RR;  // 右后轮速度
     uint16_t crc16 = 0xFFFF; // crc16校验
 } __attribute__((packed));
 class Class_Minipc 
@@ -89,7 +93,12 @@ class Class_Minipc
 		inline float Get_Velocity_Z();
 		inline uint8_t  Get_Lock_Flag();
 		inline uint8_t  Get_Win_Flag();
+		inline uint8_t	Get_Flag_1();
+		inline uint8_t	Get_Flag_2();
+		inline uint8_t	Get_Flag_3();
+	
 		void TIM1msMod50_Alive_PeriodElapsedCallback();
+		inline Enum_MiniPc_Status Get_Minipc_status();
 		Struct_MiniPc_Data MiniPc_Data;
 		Struct_MiniPc_Data Pre_MiniPc_Data;
 		Struct_Send_Data Send_Data;
@@ -126,6 +135,12 @@ class Class_Minipc
 //    uint32_t Pre_Aim_Flag = 0;
 
 };
+
+
+Enum_MiniPc_Status Class_Minipc::Get_Minipc_status()
+{
+return MiniPc_Status;
+}
 float Class_Minipc::Get_Pixel_difference_X()
 {
 return MiniPc_Data.pixel_dx;
@@ -134,9 +149,17 @@ float Class_Minipc::Get_Pixel_difference_Y()
 {
 return MiniPc_Data.pixel_dy;
 }
-uint8_t Class_Minipc::Get_Lock_Flag()
+uint8_t Class_Minipc::Get_Flag_1()
 {
 return MiniPc_Data.flags&0x01;
+}
+uint8_t Class_Minipc::Get_Flag_2()
+{
+return MiniPc_Data.flags&0x02;
+}
+uint8_t Class_Minipc::Get_Flag_3()
+{
+return MiniPc_Data.flags&0x04;
 }
 uint8_t Class_Minipc::Get_Win_Flag()
 {

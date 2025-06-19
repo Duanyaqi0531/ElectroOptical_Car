@@ -16,6 +16,9 @@ electrooptical_car/ita_car.o: ..\User\internation\ita_car.cpp \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_adc.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_can.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h \
@@ -34,4 +37,6 @@ electrooptical_car/ita_car.o: ..\User\internation\ita_car.cpp \
   ..\Middlewares\ST\ARM\DSP\Inc\arm_math.h \
   ..\Drivers\CMSIS\Include\cmsis_compiler.h \
   ..\User\middleware\alg\alg_pid.h ..\User\chariot\crt_gimbal.h \
-  ..\User\device\dvc_lkmotor.h ..\User\device\dvc_minipc.h
+  ..\User\device\dvc_lkmotor.h ..\User\device\dvc_minipc.h \
+  ..\User\middleware\drv\drv_adc.h ..\User\device\dvc_oled.h \
+  ..\Core\Inc\gpio.h ..\User\middleware\alg\alg_slope.h

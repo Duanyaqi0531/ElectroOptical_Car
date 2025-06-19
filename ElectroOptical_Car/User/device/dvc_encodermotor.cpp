@@ -27,6 +27,7 @@ void Class_EncoderMotor::Init(TIM_HandleTypeDef *__TIM_EncoderHandle,uint16_t __
 
 void Class_EncoderMotor::TIM_Encoder_Calculate()
 {
+		
     //获取当前脉冲值
     Now_Encoder = TIM_EncoderHandle->Instance->CNT;
     //计算脉冲差值
@@ -45,24 +46,36 @@ void Class_EncoderMotor::TIM_Encoder_Calculate()
 
     //模拟单圈编码器 0-Encoder_Resolution 计算圈数
     Encoder_Diff_Sum += Encoder_Diff;
-    if(Encoder_Diff_Sum > (int32_t)Encoder_Resolution * 4)
-    {
-        Encoder_Diff_Sum -= (int32_t)Encoder_Resolution * 4;
-        Total_Round++;
-    }
-    else if(Encoder_Diff_Sum < 0)
-    {
-        Encoder_Diff_Sum += (int32_t)Encoder_Resolution * 4;
-        Total_Round--;
-    }
-    //计算角度
-    Now_Angle = (float)Encoder_Diff_Sum/((int32_t)Encoder_Resolution * 4) * 360.0f / GearRation;
-    //M法测速
-    Now_Omega_Angle = (Now_Angle - Last_Angle) / 0.001f;
-    Now_Velocity = Now_Omega_Angle * DEG_TO_RAD * WheelDiameter / 2.0f;
 
-    Last_Angle = Now_Angle;
-    //Total_Angle = (float)(Encoder_Diff_Sum + Total_Round*(int32_t)Encoder_Resolution)/(int32_t)Encoder_Resolution*360.0f;
+if (Encoder_Diff_Sum > (int32_t)Encoder_Resolution) {
+    Encoder_Diff_Sum -= (int32_t)Encoder_Resolution;
+    Total_Round++;
+} else if (Encoder_Diff_Sum < 0) {
+    Encoder_Diff_Sum += (int32_t)Encoder_Resolution;
+    Total_Round--;
+}
+
+// 计算当前角度 (0~360°)
+Now_Angle = (float)Encoder_Diff_Sum / (int32_t)Encoder_Resolution * 360.0f;
+
+// 计算归一化的角度差 (处理360°跳变)
+float angle_diff = Now_Angle - Last_Angle;
+
+// 关键修正：将角度差约束到[-180, 180]区间
+if (angle_diff > 180.0f) {
+    angle_diff -= 360.0f;
+} else if (angle_diff < -180.0f) {
+    angle_diff += 360.0f;
+}
+
+// 计算角速度 (度/秒)
+Now_Omega_Angle = angle_diff / 0.002f;  // 假设采样周期1ms
+
+// 更新历史角度
+Last_Angle = Now_Angle;
+
+// 计算线速度
+Now_Velocity = Now_Omega_Angle * DEG_TO_RAD * WheelDiameter / 2.0f;
 }
 void Class_EncoderMotor::OutPut_PWM()
 {

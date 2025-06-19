@@ -57,6 +57,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define BEEP_Pin GPIO_PIN_8
+#define BEEP_GPIO_Port GPIOA
 #define ENABLE_SWTICH_Pin GPIO_PIN_3
 #define ENABLE_SWTICH_GPIO_Port GPIOD
 

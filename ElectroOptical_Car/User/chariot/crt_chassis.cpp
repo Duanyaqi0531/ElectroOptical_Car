@@ -11,10 +11,10 @@ void Class_Tricycle_Chassis::Init(float __Velocity_X_Max, float __Velocity_Y_Max
     E_Motor[2].Init(&htim4,encoder_resolution,65535,GearRation,WheelDiameter);
     E_Motor[3].Init(&htim5,encoder_resolution,65535,GearRation,WheelDiameter);
     //电机PID初始化
-    E_Motor[0].PID_Omage.Init(400000.0f,50.0f,5.0f,0.0f,2000.0f,16799.0f);
-    E_Motor[1].PID_Omage.Init(400000.0f,50.0f,5.0f,0.0f,2000.0f,16799.0f);
-    E_Motor[2].PID_Omage.Init(400000.0f,50.0f,5.0f,0.0f,2000.0f,16799.0f);
-    E_Motor[3].PID_Omage.Init(400000.0f,50.0f,5.0f,0.0f,2000.0f,16799.0f);
+    E_Motor[0].PID_Omage.Init(350000.0f,10.0f,5.0f,0.0f,2000.0f,16799.0f);
+    E_Motor[1].PID_Omage.Init(350000.0f,10.0f,5.0f,0.0f,2000.0f,16799.0f);
+    E_Motor[2].PID_Omage.Init(350000.0f,10.0f,5.0f,0.0f,2000.0f,16799.0f);
+    E_Motor[3].PID_Omage.Init(350000.0f,10.0f,5.0f,0.0f,2000.0f,16799.0f);
 }   
 void Class_Tricycle_Chassis::Speed_Resolution()
 {
@@ -49,10 +49,10 @@ void Class_Tricycle_Chassis::Speed_Resolution()
             }
 
             //速度换算，正运动学分解 
-            float motor1_temp_linear_vel = k*Target_Velocity_Y - k*Target_Velocity_X - Target_Omega*(HALF_LENGTH);
-            float motor2_temp_linear_vel = k*Target_Velocity_Y + k*Target_Velocity_X - Target_Omega*(HALF_LENGTH);
-            float motor3_temp_linear_vel = -k*Target_Velocity_Y + k*Target_Velocity_X - Target_Omega*(HALF_LENGTH);
-            float motor4_temp_linear_vel = -k*Target_Velocity_Y - k*Target_Velocity_X - Target_Omega*(HALF_LENGTH);         
+            float motor1_temp_linear_vel = k*Target_Velocity_X + k*Target_Velocity_Y - Target_Omega*(HALF_LENGTH);
+            float motor2_temp_linear_vel = k*Target_Velocity_X - k*Target_Velocity_Y - Target_Omega*(HALF_LENGTH);
+            float motor3_temp_linear_vel = -k*Target_Velocity_X - k*Target_Velocity_Y - Target_Omega*(HALF_LENGTH);
+            float motor4_temp_linear_vel = -k*Target_Velocity_X + k*Target_Velocity_Y - Target_Omega*(HALF_LENGTH);         
             //角速度*减速比  设定目标 直接给到电机输出轴
             E_Motor[0].Set_EncoderMotor_Target_Velocity(motor1_temp_linear_vel);
             E_Motor[1].Set_EncoderMotor_Target_Velocity(motor2_temp_linear_vel);
@@ -74,15 +74,16 @@ void Class_Tricycle_Chassis::Speed_Resolution()
 void Class_Tricycle_Chassis::TIM_Calculate_PeriodElapsedCallback()
 {
     Speed_Resolution();
-		if(((Target_Velocity_Y-Now_Velocity_Y)<0.2)&&((Now_Velocity_Y-Target_Velocity_Y)<0.2))
-			 Length_Y+=Now_Velocity_Y*0.001f;
-		else
-			 Length_Y+=Target_Velocity_Y*0.001f;
-		if(((Target_Velocity_X-Now_Velocity_X)<0.2)&&((Now_Velocity_X-Target_Velocity_X)<0.2))
+//		if(((Target_Velocity_Y-Now_Velocity_Y)<0.2)&&((Now_Velocity_Y-Target_Velocity_Y)<0.2))
+//			 Length_Y+=Now_Velocity_Y*0.001f;
+//		else
+//			 Length_Y+=Target_Velocity_Y*0.001f;
+//		if(((Target_Velocity_X-Now_Velocity_X)<0.2)&&((Now_Velocity_X-Target_Velocity_X)<0.2))
+//			Length_X+=Now_Velocity_X*0.001f;
+//		else
+//				Length_X+=Target_Velocity_X*0.001f;
 			Length_X+=Now_Velocity_X*0.001f;
-		else
-				Length_X+=Target_Velocity_X*0.001f;
-		
+			Length_Y+=Now_Velocity_Y*0.001f;
     //电机输出力矩纠正
     //偶数为左侧轮子 奇数为右侧轮子
     for (auto i = 0; i < 4; i++)

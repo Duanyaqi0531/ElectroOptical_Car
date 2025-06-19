@@ -3,9 +3,9 @@
 
 #include "dvc_encodermotor.h"
 
-#define encoder_resolution (500)
+#define encoder_resolution (40900)
 #define HALF_WIDTH (0.15f)
-#define HALF_LENGTH (0.15f)
+#define HALF_LENGTH (0.11f)
 #define GearRation (20.25f)
 #define WheelDiameter (0.075f)
 #define   k   sqrt(2)/2.0f
@@ -47,9 +47,10 @@ public:
 		float Length_X;
 		//y方向里程计
 		float Length_Y;
-protected:
-    //初始化相关常量
+		 //初始化相关常量
     Class_EncoderMotor E_Motor[4];
+protected:
+   
 
     //速度X限制
     float Velocity_X_Max;

@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
 #include "can.h"
 #include "dma.h"
 #include "i2c.h"
@@ -108,6 +109,8 @@ int main(void)
   MX_USART6_UART_Init();
   MX_TIM6_Init();
   MX_UART4_Init();
+  MX_USART2_UART_Init();
+  MX_ADC2_Init();
   /* USER CODE BEGIN 2 */
   Task_Init();
   /* USER CODE END 2 */

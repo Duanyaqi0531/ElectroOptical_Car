@@ -7,6 +7,13 @@
 #include "crt_gimbal.h"
 #include "dvc_minipc.h"
 
+#include "drv_adc.h"
+#include "dvc_oled.h"
+
+#include "alg_slope.h"
+
+
+#include "drv_math.h"
 /* USER CODE BEGIN  */
 class Class_EoCar;
 // extern Class_EoCar EoCar;
@@ -15,8 +22,9 @@ class Class_EoCar
 {
 public:
 		Class_Minipc Minipc;
-		Class_PID Pid_Yaw;
-		Class_PID Pid_Pitch;
+		Class_Slope Yaw_Slope;
+		Class_Slope Pitch_Slope;
+		Class_OLED OLED;
     Class_Tricycle_Chassis Chassis;
    // Class_Gimbal Gimbal;
     void Init();

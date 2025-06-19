@@ -47,13 +47,13 @@ void UART_Init(UART_HandleTypeDef *huart, UART_Call_Back Callback_Function, uint
         UART1_Manage_Object.Rx_Buffer_Length = Rx_Buffer_Length;
         HAL_UARTEx_ReceiveToIdle_DMA(huart, UART1_Manage_Object.Rx_Buffer, UART1_Manage_Object.Rx_Buffer_Length);
     }
-//    else if (huart->Instance == USART2)
-//    {
-//        UART2_Manage_Object.UART_Handler = huart;
-//        UART2_Manage_Object.Callback_Function = Callback_Function;
-//        UART2_Manage_Object.Rx_Buffer_Length = Rx_Buffer_Length;
-//        HAL_UARTEx_ReceiveToIdle_DMA(huart, UART2_Manage_Object.Rx_Buffer, UART2_Manage_Object.Rx_Buffer_Length);
-//    }
+    else if (huart->Instance == USART2)
+    {
+        UART2_Manage_Object.UART_Handler = huart;
+        UART2_Manage_Object.Callback_Function = Callback_Function;
+        UART2_Manage_Object.Rx_Buffer_Length = Rx_Buffer_Length;
+        HAL_UARTEx_ReceiveToIdle_DMA(huart, UART2_Manage_Object.Rx_Buffer, UART2_Manage_Object.Rx_Buffer_Length);
+    }
     else if (huart->Instance == USART3)
     {
         UART3_Manage_Object.UART_Handler = huart;
@@ -129,12 +129,12 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
         UART1_Manage_Object.Callback_Function(UART1_Manage_Object.Rx_Buffer, Size);
         HAL_UARTEx_ReceiveToIdle_DMA(huart, UART1_Manage_Object.Rx_Buffer, UART1_Manage_Object.Rx_Buffer_Length);
     }
-//    else if (huart->Instance == USART2)
-//    {
-//        UART2_Manage_Object.Rx_Length = Size;
-//        UART2_Manage_Object.Callback_Function(UART2_Manage_Object.Rx_Buffer, Size);
-//        HAL_UARTEx_ReceiveToIdle_DMA(huart, UART2_Manage_Object.Rx_Buffer, UART2_Manage_Object.Rx_Buffer_Length);
-//    }
+    else if (huart->Instance == USART2)
+    {
+        UART2_Manage_Object.Rx_Length = Size;
+        UART2_Manage_Object.Callback_Function(UART2_Manage_Object.Rx_Buffer, Size);
+        HAL_UARTEx_ReceiveToIdle_DMA(huart, UART2_Manage_Object.Rx_Buffer, UART2_Manage_Object.Rx_Buffer_Length);
+    }
     else if (huart->Instance == USART3)
     {
         UART3_Manage_Object.Rx_Length = Size;
