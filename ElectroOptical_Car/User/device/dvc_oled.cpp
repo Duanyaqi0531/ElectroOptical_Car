@@ -44,9 +44,10 @@ void Class_OLED::TIM_Process_PeriodElapsedCallback()
     count100 ++;
     if(count100 > 100)
     {
-        OLED_ShowString(0, 0, (const uint8_t*)"Power: ");
-        
-        OLED_ShowString(0, 10, (const uint8_t*)"IMU_Yaw: ");
+
+ //       OLED_ShowString(0, 0, (const uint8_t*)"Power: ");
+//        
+//        OLED_ShowString(0, 10, (const uint8_t*)"IMU_Yaw: ");
 
 
         OLED_Refresh_Gram();

@@ -40,7 +40,7 @@ public:
     inline void Set_Increase_Value(float __Increase_Value);
     inline void Set_Decrease_Value(float __Decrease_Value);
     inline void Set_Target(float __Target);
-
+		inline void Set_Now(float __Now);
     void TIM_Calculate_PeriodElapsedCallback();
 
 protected:
@@ -84,6 +84,10 @@ protected:
  * @brief 获取输出值
  *
  */
+void Class_Slope::Set_Now(float __Now)
+{
+Now=__Now;
+}
 float Class_Slope::Get_Out()
 {
     return (Out);

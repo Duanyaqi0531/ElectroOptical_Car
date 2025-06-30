@@ -95,6 +95,7 @@ class Class_Minipc
 		inline uint8_t  Get_Win_Flag();
 		inline uint8_t	Get_Flag_1();
 		inline uint8_t	Get_Flag_2();
+		inline uint8_t	Get_Flag_4();
 		inline uint8_t	Get_Flag_3();
 	
 		void TIM1msMod50_Alive_PeriodElapsedCallback();
@@ -156,10 +157,15 @@ return MiniPc_Data.flags&0x01;
 uint8_t Class_Minipc::Get_Flag_2()
 {
 return MiniPc_Data.flags&0x02;
+	
 }
 uint8_t Class_Minipc::Get_Flag_3()
 {
 return MiniPc_Data.flags&0x04;
+}
+uint8_t Class_Minipc::Get_Flag_4()
+{
+return MiniPc_Data.flags&0x08;
 }
 uint8_t Class_Minipc::Get_Win_Flag()
 {

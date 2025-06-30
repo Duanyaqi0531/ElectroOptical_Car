@@ -1098,7 +1098,7 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x68347461)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x68347461)
 I (..\User\middleware\alg\alg_pid.h)(0x682D7958)
 F (..\User\device\dvc_minipc.cpp)(0x684959DA)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/device -I ../User/middleware/alg -I ../User/middleware/drv -I ../User/task -I ../Middlewares/ST/ARM/DSP/Inc -I ../User/internation -I ../User/chariot-I./RTE/_ElectroOptical_Car-ID:/keil540/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/keil540/pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="540" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o electrooptical_car/dvc_minipc.o -MMD)
-I (..\User\device\dvc_minipc.h)(0x6853CB84)
+I (..\User\device\dvc_minipc.h)(0x68557678)
 I (..\User\middleware\drv\drv_uart.h)(0x682D85CC)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x68347461)
 I (..\Core\Inc\stm32f4xx_hal_conf.h)(0x684E5E59)
@@ -1132,7 +1132,7 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x68347461)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x68347461)
 I (..\Core\Inc\usart.h)(0x68498E47)
 I (..\Core\Inc\main.h)(0x684E7289)
-F (..\User\device\dvc_oled.cpp)(0x684E7266)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/device -I ../User/middleware/alg -I ../User/middleware/drv -I ../User/task -I ../Middlewares/ST/ARM/DSP/Inc -I ../User/internation -I ../User/chariot-I./RTE/_ElectroOptical_Car-ID:/keil540/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/keil540/pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="540" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o electrooptical_car/dvc_oled.o -MMD)
+F (..\User\device\dvc_oled.cpp)(0x6855E012)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/device -I ../User/middleware/alg -I ../User/middleware/drv -I ../User/task -I ../Middlewares/ST/ARM/DSP/Inc -I ../User/internation -I ../User/chariot-I./RTE/_ElectroOptical_Car-ID:/keil540/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/keil540/pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="540" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o electrooptical_car/dvc_oled.o -MMD)
 I (..\User\device\dvc_oled.h)(0x684E7260)
 I (..\Core\Inc\gpio.h)(0x682CB890)
 I (..\Core\Inc\main.h)(0x684E7289)
@@ -1173,7 +1173,7 @@ I (..\Middlewares\ST\ARM\DSP\Inc\arm_math.h)(0x66EA5DD3)
 I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x6834745A)
 I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x6834745A)
 F (..\User\middleware\alg\alg_slope.cpp)(0x68398901)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/device -I ../User/middleware/alg -I ../User/middleware/drv -I ../User/task -I ../Middlewares/ST/ARM/DSP/Inc -I ../User/internation -I ../User/chariot-I./RTE/_ElectroOptical_Car-ID:/keil540/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/keil540/pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="540" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o electrooptical_car/alg_slope.o -MMD)
-I (..\User\middleware\alg\alg_slope.h)(0x68398901)
+I (..\User\middleware\alg\alg_slope.h)(0x6853DF92)
 I (..\User\middleware\drv\drv_math.h)(0x682D7782)
 I (..\Middlewares\ST\ARM\DSP\Inc\arm_math.h)(0x66EA5DD3)
 I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x6834745A)
@@ -1394,7 +1394,7 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x68347461)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x68347461)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x68347461)
 I (..\User\middleware\alg\alg_pid.h)(0x682D7958)
-F (..\User\internation\ita_car.cpp)(0x68528B1C)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/device -I ../User/middleware/alg -I ../User/middleware/drv -I ../User/task -I ../Middlewares/ST/ARM/DSP/Inc -I ../User/internation -I ../User/chariot-I./RTE/_ElectroOptical_Car-ID:/keil540/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/keil540/pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="540" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o electrooptical_car/ita_car.o -MMD)
+F (..\User\internation\ita_car.cpp)(0x6855C807)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/device -I ../User/middleware/alg -I ../User/middleware/drv -I ../User/task -I ../Middlewares/ST/ARM/DSP/Inc -I ../User/internation -I ../User/chariot-I./RTE/_ElectroOptical_Car-ID:/keil540/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/keil540/pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="540" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o electrooptical_car/ita_car.o -MMD)
 I (..\User\internation\ita_car.h)(0x685280E9)
 I (..\User\middleware\drv\drv_can.h)(0x682D791A)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x68347461)
@@ -1440,12 +1440,12 @@ I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x6834745A)
 I (..\User\middleware\alg\alg_pid.h)(0x682D7958)
 I (..\User\chariot\crt_gimbal.h)(0x68358CFC)
 I (..\User\device\dvc_lkmotor.h)(0x68358CFC)
-I (..\User\device\dvc_minipc.h)(0x6853CB84)
+I (..\User\device\dvc_minipc.h)(0x68557678)
 I (..\User\middleware\drv\drv_adc.h)(0x684E5EC6)
 I (..\User\device\dvc_oled.h)(0x684E7260)
 I (..\Core\Inc\gpio.h)(0x682CB890)
-I (..\User\middleware\alg\alg_slope.h)(0x68398901)
-F (..\User\task\task.cpp)(0x6853CCBE)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/device -I ../User/middleware/alg -I ../User/middleware/drv -I ../User/task -I ../Middlewares/ST/ARM/DSP/Inc -I ../User/internation -I ../User/chariot-I./RTE/_ElectroOptical_Car-ID:/keil540/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/keil540/pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="540" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o electrooptical_car/task.o -MMD)
+I (..\User\middleware\alg\alg_slope.h)(0x6853DF92)
+F (..\User\task\task.cpp)(0x6855E122)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O0 -ffunction-sections -w -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../User/device -I ../User/middleware/alg -I ../User/middleware/drv -I ../User/task -I ../Middlewares/ST/ARM/DSP/Inc -I ../User/internation -I ../User/chariot-I./RTE/_ElectroOptical_Car-ID:/keil540/pack/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/keil540/pack/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="540" -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx-o electrooptical_car/task.o -MMD)
 I (..\User\task\task.h)(0x682D846E)
 I (..\User\internation\ita_car.h)(0x685280E9)
 I (..\User\middleware\drv\drv_can.h)(0x682D791A)
@@ -1492,9 +1492,9 @@ I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x6834745A)
 I (..\User\middleware\alg\alg_pid.h)(0x682D7958)
 I (..\User\chariot\crt_gimbal.h)(0x68358CFC)
 I (..\User\device\dvc_lkmotor.h)(0x68358CFC)
-I (..\User\device\dvc_minipc.h)(0x6853CB84)
+I (..\User\device\dvc_minipc.h)(0x68557678)
 I (..\User\middleware\drv\drv_adc.h)(0x684E5EC6)
 I (..\User\device\dvc_oled.h)(0x684E7260)
 I (..\Core\Inc\gpio.h)(0x682CB890)
-I (..\User\middleware\alg\alg_slope.h)(0x68398901)
+I (..\User\middleware\alg\alg_slope.h)(0x6853DF92)
 F (../Middlewares/ST/ARM/DSP/Lib/arm_cortexM4lf_math.lib)(0x66EA5DD3)()
